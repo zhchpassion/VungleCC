@@ -78,7 +78,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.source       = { :git => "https://github.com/zhchpassion/VungleCC.git", 
-                        :branch => "master",
+                        :branch => "main",
                         :tag => "#{spec.version}"
   }
 
