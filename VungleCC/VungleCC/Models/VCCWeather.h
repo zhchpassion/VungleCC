@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) VCCCoord *coord;
 @property (nonatomic, strong) VCCSys *sys;
 @property (nonatomic, strong) VCCWind *wind;
+@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, copy)  NSString *localDateString;
 
 @end
 

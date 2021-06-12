@@ -31,8 +31,25 @@
         if (dict && [dict isKindOfClass:NSDictionary.class]) {
             _wind = [[VCCWind alloc] initWithParameters:dict];
         }
+        NSNumber *num = [parameters objectForKey:@"dt"];
+        if (num && [num isKindOfClass:NSNumber.class]) {
+            _date = [self dateWithUTC:num.doubleValue];
+            _localDateString = [self stringFromDate:_date];
+        }
     }
     return self;
 }
+
+- (NSDate *)dateWithUTC:(NSTimeInterval)utc {
+    return [NSDate dateWithTimeIntervalSince1970:utc];
+}
+
+- (NSString *)stringFromDate:(NSDate *)date {
+    NSDateFormatter* df_local = [[NSDateFormatter alloc] init];
+    [df_local setTimeZone:[NSTimeZone localTimeZone]];
+    [df_local setDateFormat:@"yyyy.MM.dd G 'at' HH:mm:ss zzz"];
+    return [df_local stringFromDate:date];
+}
+
 
 @end
