@@ -3,14 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		140A44C226720FA900F782A8 /* VCCWeatherFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 140A44C026720FA800F782A8 /* VCCWeatherFetcher.h */; };
 		140A44C326720FA900F782A8 /* VCCWeatherFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A44C126720FA800F782A8 /* VCCWeatherFetcher.m */; };
-		140A44C626720FD000F782A8 /* VCCWeather.h in Headers */ = {isa = PBXBuildFile; fileRef = 140A44C426720FD000F782A8 /* VCCWeather.h */; };
-		140A44C726720FD000F782A8 /* VCCWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A44C526720FD000F782A8 /* VCCWeather.m */; };
 		140A45442674986200F782A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A45432674986200F782A8 /* AppDelegate.m */; };
 		140A45472674986200F782A8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A45462674986200F782A8 /* SceneDelegate.m */; };
 		140A454A2674986200F782A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A45492674986200F782A8 /* ViewController.m */; };
@@ -18,6 +16,18 @@
 		140A454F2674986400F782A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140A454E2674986400F782A8 /* Assets.xcassets */; };
 		140A45522674986400F782A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140A45502674986400F782A8 /* LaunchScreen.storyboard */; };
 		140A45552674986400F782A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A45542674986400F782A8 /* main.m */; };
+		140A45A12674DD3E00F782A8 /* VCCWeather.h in Headers */ = {isa = PBXBuildFile; fileRef = 140A459F2674DD3E00F782A8 /* VCCWeather.h */; };
+		140A45A22674DD3E00F782A8 /* VCCWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A45A02674DD3E00F782A8 /* VCCWeather.m */; };
+		140A45A52674DD6600F782A8 /* VCCWind.h in Headers */ = {isa = PBXBuildFile; fileRef = 140A45A32674DD6600F782A8 /* VCCWind.h */; };
+		140A45A62674DD6600F782A8 /* VCCWind.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A45A42674DD6600F782A8 /* VCCWind.m */; };
+		140A45A92674DD7900F782A8 /* VCCMain.h in Headers */ = {isa = PBXBuildFile; fileRef = 140A45A72674DD7900F782A8 /* VCCMain.h */; };
+		140A45AA2674DD7900F782A8 /* VCCMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A45A82674DD7900F782A8 /* VCCMain.m */; };
+		140A45AD2674DD9B00F782A8 /* VCCCoord.h in Headers */ = {isa = PBXBuildFile; fileRef = 140A45AB2674DD9B00F782A8 /* VCCCoord.h */; };
+		140A45AE2674DD9B00F782A8 /* VCCCoord.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A45AC2674DD9B00F782A8 /* VCCCoord.m */; };
+		140A45B12674DDAC00F782A8 /* VCCSys.h in Headers */ = {isa = PBXBuildFile; fileRef = 140A45AF2674DDAC00F782A8 /* VCCSys.h */; };
+		140A45B22674DDAC00F782A8 /* VCCSys.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A45B02674DDAC00F782A8 /* VCCSys.m */; };
+		140A45B52674DF9500F782A8 /* VCCBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 140A45B32674DF9500F782A8 /* VCCBaseModel.h */; };
+		140A45B62674DF9500F782A8 /* VCCBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A45B42674DF9500F782A8 /* VCCBaseModel.m */; };
 		14DAD190266F8A8C00FD6937 /* VungleCC.h in Headers */ = {isa = PBXBuildFile; fileRef = 14DAD18E266F8A8C00FD6937 /* VungleCC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C035EE72FA0F84F7602F278 /* Pods_VungleDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B697C93CF9D1DAEEE5AB4FE8 /* Pods_VungleDemo.framework */; };
 /* End PBXBuildFile section */
@@ -25,8 +35,6 @@
 /* Begin PBXFileReference section */
 		140A44C026720FA800F782A8 /* VCCWeatherFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCWeatherFetcher.h; sourceTree = "<group>"; };
 		140A44C126720FA800F782A8 /* VCCWeatherFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCWeatherFetcher.m; sourceTree = "<group>"; };
-		140A44C426720FD000F782A8 /* VCCWeather.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCWeather.h; sourceTree = "<group>"; };
-		140A44C526720FD000F782A8 /* VCCWeather.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCWeather.m; sourceTree = "<group>"; };
 		140A45402674986200F782A8 /* VungleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VungleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		140A45422674986200F782A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		140A45432674986200F782A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +47,18 @@
 		140A45512674986400F782A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		140A45532674986400F782A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		140A45542674986400F782A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		140A459F2674DD3E00F782A8 /* VCCWeather.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCWeather.h; sourceTree = "<group>"; };
+		140A45A02674DD3E00F782A8 /* VCCWeather.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCWeather.m; sourceTree = "<group>"; };
+		140A45A32674DD6600F782A8 /* VCCWind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCWind.h; sourceTree = "<group>"; };
+		140A45A42674DD6600F782A8 /* VCCWind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCWind.m; sourceTree = "<group>"; };
+		140A45A72674DD7900F782A8 /* VCCMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCMain.h; sourceTree = "<group>"; };
+		140A45A82674DD7900F782A8 /* VCCMain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCMain.m; sourceTree = "<group>"; };
+		140A45AB2674DD9B00F782A8 /* VCCCoord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCCoord.h; sourceTree = "<group>"; };
+		140A45AC2674DD9B00F782A8 /* VCCCoord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCCoord.m; sourceTree = "<group>"; };
+		140A45AF2674DDAC00F782A8 /* VCCSys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCSys.h; sourceTree = "<group>"; };
+		140A45B02674DDAC00F782A8 /* VCCSys.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCSys.m; sourceTree = "<group>"; };
+		140A45B32674DF9500F782A8 /* VCCBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCBaseModel.h; sourceTree = "<group>"; };
+		140A45B42674DF9500F782A8 /* VCCBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCBaseModel.m; sourceTree = "<group>"; };
 		14DAD18B266F8A8C00FD6937 /* VungleCC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VungleCC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DAD18E266F8A8C00FD6937 /* VungleCC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VungleCC.h; sourceTree = "<group>"; };
 		14DAD18F266F8A8C00FD6937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +112,25 @@
 			path = VungleDemo;
 			sourceTree = "<group>";
 		};
+		140A458D2674DD0600F782A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				140A459F2674DD3E00F782A8 /* VCCWeather.h */,
+				140A45A02674DD3E00F782A8 /* VCCWeather.m */,
+				140A45A32674DD6600F782A8 /* VCCWind.h */,
+				140A45A42674DD6600F782A8 /* VCCWind.m */,
+				140A45A72674DD7900F782A8 /* VCCMain.h */,
+				140A45A82674DD7900F782A8 /* VCCMain.m */,
+				140A45AB2674DD9B00F782A8 /* VCCCoord.h */,
+				140A45AC2674DD9B00F782A8 /* VCCCoord.m */,
+				140A45AF2674DDAC00F782A8 /* VCCSys.h */,
+				140A45B02674DDAC00F782A8 /* VCCSys.m */,
+				140A45B32674DF9500F782A8 /* VCCBaseModel.h */,
+				140A45B42674DF9500F782A8 /* VCCBaseModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		14DAD181266F8A8C00FD6937 = {
 			isa = PBXGroup;
 			children = (
@@ -115,12 +154,11 @@
 		14DAD18D266F8A8C00FD6937 /* VungleCC */ = {
 			isa = PBXGroup;
 			children = (
+				140A458D2674DD0600F782A8 /* Models */,
 				14DAD18E266F8A8C00FD6937 /* VungleCC.h */,
 				14DAD18F266F8A8C00FD6937 /* Info.plist */,
 				140A44C026720FA800F782A8 /* VCCWeatherFetcher.h */,
 				140A44C126720FA800F782A8 /* VCCWeatherFetcher.m */,
-				140A44C426720FD000F782A8 /* VCCWeather.h */,
-				140A44C526720FD000F782A8 /* VCCWeather.m */,
 			);
 			path = VungleCC;
 			sourceTree = "<group>";
@@ -141,9 +179,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140A45A92674DD7900F782A8 /* VCCMain.h in Headers */,
+				140A45AD2674DD9B00F782A8 /* VCCCoord.h in Headers */,
 				140A44C226720FA900F782A8 /* VCCWeatherFetcher.h in Headers */,
+				140A45B12674DDAC00F782A8 /* VCCSys.h in Headers */,
+				140A45B52674DF9500F782A8 /* VCCBaseModel.h in Headers */,
+				140A45A12674DD3E00F782A8 /* VCCWeather.h in Headers */,
+				140A45A52674DD6600F782A8 /* VCCWind.h in Headers */,
 				14DAD190266F8A8C00FD6937 /* VungleCC.h in Headers */,
-				140A44C626720FD000F782A8 /* VCCWeather.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,8 +343,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140A45A62674DD6600F782A8 /* VCCWind.m in Sources */,
+				140A45B22674DDAC00F782A8 /* VCCSys.m in Sources */,
 				140A44C326720FA900F782A8 /* VCCWeatherFetcher.m in Sources */,
-				140A44C726720FD000F782A8 /* VCCWeather.m in Sources */,
+				140A45AE2674DD9B00F782A8 /* VCCCoord.m in Sources */,
+				140A45A22674DD3E00F782A8 /* VCCWeather.m in Sources */,
+				140A45B62674DF9500F782A8 /* VCCBaseModel.m in Sources */,
+				140A45AA2674DD7900F782A8 /* VCCMain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
