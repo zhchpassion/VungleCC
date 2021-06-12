@@ -10,9 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXTERN NSInteger kVCCErrorCodeNoLocationAuthorization      = -10001;     // geo location authorization not obtained
-FOUNDATION_EXTERN NSInteger kVCCErrorCodeInvalidZipCode               = -10002;     // invalid zip code
-FOUNDATION_EXTERN NSInteger kVCCErrorCodeUndefined                    = -10003;     // undefined error
+extern const NSInteger kVCCErrorCodeNoLocationAuthorization;     // geo location authorization not obtained
+extern const NSInteger kVCCErrorCodeInvalidZipCode;              // invalid zip code
+extern const NSInteger kVCCErrorCodeUndefined;                   // undefined error
 
 /// success: whether is the request succeeded
 /// weather: response weather model, might be nil

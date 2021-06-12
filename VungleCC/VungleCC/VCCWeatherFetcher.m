@@ -8,10 +8,13 @@
 #import "VCCWeatherFetcher.h"
 #import <CoreLocation/CoreLocation.h>
 
+const NSInteger kVCCErrorCodeNoLocationAuthorization            = -10001;
+const NSInteger kVCCErrorCodeInvalidZipCode                     = -10002;
+const NSInteger kVCCErrorCodeUndefined                          = -10003;
+
 typedef void(^VCCWFBuildUrlCompleteHandler)(BOOL success, NSString *_Nullable url, NSError *_Nullable error);
 
 @interface VCCWeatherFetcher()
-
 
 @end
 
@@ -38,17 +41,50 @@ static NSString * const kVCCOpenWeatherBaseUrl  = @"https://api.openweathermap.o
             NSURLSession *session = [NSURLSession sharedSession];
             NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                 if (error) {
-                    if (complete) {
-                        complete(NO, nil, error);
-                    }
+                    NSError *e = [self buildErrorWithCode:kVCCErrorCodeUndefined
+                                                  andErrorMsg:@"undefined error occoured, parse network data error"];
+                    if (complete) complete(NO, nil, e);
                     return;
+                }
+                NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:data
+                                                                             options:NSJSONReadingMutableContainers
+                                                                               error:nil];
+                if (responseDict && [responseDict isKindOfClass:NSDictionary.class]) {
+                    NSNumber *num = [responseDict objectForKey:@"cod"];
+                    if (num && [num isKindOfClass:NSNumber.class]) {
+                        switch (num.integerValue) {
+                            case 200: {
+                                VCCWeather *weather = [[VCCWeather alloc] initWithParameters:responseDict];
+                                if (complete) complete(YES, weather, nil);
+                            }
+                                break;
+                            case 404: {
+                                NSError *e = [self buildErrorWithCode:kVCCErrorCodeInvalidZipCode
+                                                              andErrorMsg:@"invalid zip code/country code"];
+                                if (complete) complete(NO, nil, e);
+                            }
+                                break;
+                            default: {
+                                NSError *e = [self buildErrorWithCode:kVCCErrorCodeUndefined
+                                                              andErrorMsg:@"undefined error occoured, parse network data error"];
+                                if (complete) complete(NO, nil, e);
+                            }
+                                break;
+                        }
+                    }else {
+                        NSError *e = [self buildErrorWithCode:kVCCErrorCodeUndefined
+                                                      andErrorMsg:@"undefined error occoured, parse network data error"];
+                        if (complete) complete(NO, nil, e);
+                    }
+                }else {
+                    NSError *e = [self buildErrorWithCode:kVCCErrorCodeUndefined
+                                                  andErrorMsg:@"undefined error occoured, parse network data error"];
+                    if (complete) complete(NO, nil, e);
                 }
             }];
             [task resume];
         }else {
-            if (complete) {
-                complete(NO, nil, error);
-            }
+            if (complete) complete(NO, nil, error);
         }
     }];
 }
