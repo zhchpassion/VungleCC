@@ -2,5 +2,5 @@ platform :ios, '9.0'
 
 target 'VungleDemo' do
   use_frameworks!
-  pod 'VungleCC', '0.0.1'
+  pod 'VungleCC', '0.0.2'
 end
