@@ -1,0 +1,5 @@
+.DS_Store
+Pods/
+xcuserdata/
+VungleCC/VungleCC.xcodeproj/xcuserdata
+VungleCC/VungleCC.xcodeproj/project.xcworkspace/
