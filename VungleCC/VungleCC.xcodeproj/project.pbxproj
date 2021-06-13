@@ -28,9 +28,21 @@
 		140A45B22674DDAC00F782A8 /* VCCSys.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A45B02674DDAC00F782A8 /* VCCSys.m */; };
 		140A45B52674DF9500F782A8 /* VCCBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 140A45B32674DF9500F782A8 /* VCCBaseModel.h */; };
 		140A45B62674DF9500F782A8 /* VCCBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 140A45B42674DF9500F782A8 /* VCCBaseModel.m */; };
+		14617AFF26760246008120DC /* VungleCCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14617AFE26760246008120DC /* VungleCCTests.m */; };
+		14617B0126760246008120DC /* VungleCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DAD18B266F8A8C00FD6937 /* VungleCC.framework */; };
 		14DAD190266F8A8C00FD6937 /* VungleCC.h in Headers */ = {isa = PBXBuildFile; fileRef = 14DAD18E266F8A8C00FD6937 /* VungleCC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C035EE72FA0F84F7602F278 /* Pods_VungleDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B697C93CF9D1DAEEE5AB4FE8 /* Pods_VungleDemo.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14617B0226760246008120DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14DAD182266F8A8C00FD6937 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14DAD18A266F8A8C00FD6937;
+			remoteInfo = VungleCC;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		140A44C026720FA800F782A8 /* VCCWeatherFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCWeatherFetcher.h; sourceTree = "<group>"; };
@@ -59,6 +71,9 @@
 		140A45B02674DDAC00F782A8 /* VCCSys.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCSys.m; sourceTree = "<group>"; };
 		140A45B32674DF9500F782A8 /* VCCBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCCBaseModel.h; sourceTree = "<group>"; };
 		140A45B42674DF9500F782A8 /* VCCBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCCBaseModel.m; sourceTree = "<group>"; };
+		14617AFC26760246008120DC /* VungleCCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VungleCCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14617AFE26760246008120DC /* VungleCCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VungleCCTests.m; sourceTree = "<group>"; };
+		14617B0026760246008120DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14DAD18B266F8A8C00FD6937 /* VungleCC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VungleCC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DAD18E266F8A8C00FD6937 /* VungleCC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VungleCC.h; sourceTree = "<group>"; };
 		14DAD18F266F8A8C00FD6937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +88,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C035EE72FA0F84F7602F278 /* Pods_VungleDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14617AF926760246008120DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14617B0126760246008120DC /* VungleCC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,11 +154,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		14617AFD26760246008120DC /* VungleCCTests */ = {
+			isa = PBXGroup;
+			children = (
+				14617AFE26760246008120DC /* VungleCCTests.m */,
+				14617B0026760246008120DC /* Info.plist */,
+			);
+			path = VungleCCTests;
+			sourceTree = "<group>";
+		};
 		14DAD181266F8A8C00FD6937 = {
 			isa = PBXGroup;
 			children = (
 				14DAD18D266F8A8C00FD6937 /* VungleCC */,
 				140A45412674986200F782A8 /* VungleDemo */,
+				14617AFD26760246008120DC /* VungleCCTests */,
 				14DAD18C266F8A8C00FD6937 /* Products */,
 				22E5F0298868E4BB7777B2A3 /* Pods */,
 				0EBD222F893A04587B772E4F /* Frameworks */,
@@ -147,6 +180,7 @@
 			children = (
 				14DAD18B266F8A8C00FD6937 /* VungleCC.framework */,
 				140A45402674986200F782A8 /* VungleDemo.app */,
+				14617AFC26760246008120DC /* VungleCCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,6 +246,24 @@
 			productReference = 140A45402674986200F782A8 /* VungleDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		14617AFB26760246008120DC /* VungleCCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14617B0626760246008120DC /* Build configuration list for PBXNativeTarget "VungleCCTests" */;
+			buildPhases = (
+				14617AF826760246008120DC /* Sources */,
+				14617AF926760246008120DC /* Frameworks */,
+				14617AFA26760246008120DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14617B0326760246008120DC /* PBXTargetDependency */,
+			);
+			name = VungleCCTests;
+			productName = VungleCCTests;
+			productReference = 14617AFC26760246008120DC /* VungleCCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		14DAD18A266F8A8C00FD6937 /* VungleCC */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14DAD193266F8A8C00FD6937 /* Build configuration list for PBXNativeTarget "VungleCC" */;
@@ -241,6 +293,9 @@
 					140A453F2674986200F782A8 = {
 						CreatedOnToolsVersion = 12.5;
 					};
+					14617AFB26760246008120DC = {
+						CreatedOnToolsVersion = 12.5;
+					};
 					14DAD18A266F8A8C00FD6937 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -261,6 +316,7 @@
 			targets = (
 				14DAD18A266F8A8C00FD6937 /* VungleCC */,
 				140A453F2674986200F782A8 /* VungleDemo */,
+				14617AFB26760246008120DC /* VungleCCTests */,
 			);
 		};
 /* End PBXProject section */
@@ -273,6 +329,13 @@
 				140A45522674986400F782A8 /* LaunchScreen.storyboard in Resources */,
 				140A454F2674986400F782A8 /* Assets.xcassets in Resources */,
 				140A454D2674986200F782A8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14617AFA26760246008120DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +402,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		14617AF826760246008120DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14617AFF26760246008120DC /* VungleCCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14DAD187266F8A8C00FD6937 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +425,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14617B0326760246008120DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14DAD18A266F8A8C00FD6937 /* VungleCC */;
+			targetProxy = 14617B0226760246008120DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		140A454B2674986200F782A8 /* Main.storyboard */ = {
@@ -410,6 +489,42 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.zhchpassion.VungleDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		14617B0426760246008120DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D467QNTEYC;
+				INFOPLIST_FILE = VungleCCTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.zhchpassion.VungleCCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14617B0526760246008120DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D467QNTEYC;
+				INFOPLIST_FILE = VungleCCTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.zhchpassion.VungleCCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -595,6 +710,15 @@
 			buildConfigurations = (
 				140A45562674986400F782A8 /* Debug */,
 				140A45572674986400F782A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14617B0626760246008120DC /* Build configuration list for PBXNativeTarget "VungleCCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14617B0426760246008120DC /* Debug */,
+				14617B0526760246008120DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

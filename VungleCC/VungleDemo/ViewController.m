@@ -46,6 +46,14 @@
     
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
@@ -60,6 +68,7 @@
     [self.fetcher getWeatherWithCompletionHandler:^(BOOL success, VCCWeather * _Nullable weather, NSError * _Nullable error) {
         weakSelf.button.enabled = YES;
         if (error) {
+            [weakSelf generateErrorTextToTexView:error];
             return;
         }
         [weakSelf generateOutputToTextView:weather];
@@ -76,6 +85,15 @@
     line = [NSString stringWithFormat:@"Max/Min Temp: %.1lf%@/%.1lf%@\n", weather.main.temp_max, unit, weather.main.temp_min, unit];
     output = [output stringByAppendingString:line];
     line = [NSString stringWithFormat:@"Fetch Time: %@", weather.localDateString];
+    output = [output stringByAppendingString:line];
+    self.textView.text = output;
+}
+
+- (void)generateErrorTextToTexView:(NSError *)error {
+    NSString *output = @"Oops!! error occoured:\n";
+    NSString *line = [NSString stringWithFormat:@"Error code: %ld\n", error.code];
+    output = [output stringByAppendingString:line];
+    line = [NSString stringWithFormat:@"Error Message: %@\n", [error.userInfo objectForKey:NSLocalizedDescriptionKey]];
     output = [output stringByAppendingString:line];
     self.textView.text = output;
 }

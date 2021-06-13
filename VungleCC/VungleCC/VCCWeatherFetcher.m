@@ -8,9 +8,9 @@
 #import "VCCWeatherFetcher.h"
 #import <CoreLocation/CoreLocation.h>
 
-const NSInteger kVCCErrorCodeNoLocationAuthorization            = -10001;
-const NSInteger kVCCErrorCodeInvalidZipCode                     = -10002;
-const NSInteger kVCCErrorCodeUndefined                          = -10003;
+const NSInteger kVCCErrorCodeNoLocationAuthorization            = 10001;
+const NSInteger kVCCErrorCodeInvalidZipCode                     = 10002;
+const NSInteger kVCCErrorCodeUndefined                          = 10003;
 
 typedef void(^VCCWFBuildUrlCompleteHandler)(BOOL success, NSString *_Nullable url, NSError *_Nullable error);
 
@@ -104,9 +104,10 @@ static NSString * const kVCCOpenWeatherBaseUrl  = @"https://api.openweathermap.o
                                                                      options:NSJSONReadingMutableContainers
                                                                        error:nil];
         if (responseDict && [responseDict isKindOfClass:NSDictionary.class]) {
-            NSNumber *num = [responseDict objectForKey:@"cod"];
-            if (num && [num isKindOfClass:NSNumber.class]) {
-                switch (num.integerValue) {
+            id num = [responseDict objectForKey:@"cod"];
+            if (num && ([num isKindOfClass:NSNumber.class] || [num isKindOfClass:NSString.class])) {
+                NSInteger resCode = [num isKindOfClass:NSNumber.class] ? ((NSNumber *)num).integerValue : ((NSString *)num).integerValue;
+                switch (resCode) {
                     case 200: {
                         VCCWeather *weather = [[VCCWeather alloc] initWithParameters:responseDict];
                         [self invokeBlockOnMainThreadWithSuccess:YES weather:weather andError:nil];
