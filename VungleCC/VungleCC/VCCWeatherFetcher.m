@@ -161,6 +161,13 @@ static NSString * const kVCCOpenWeatherBaseUrl  = @"https://api.openweathermap.o
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
     if (status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusAuthorizedAlways) {
         [self.locManager startUpdatingLocation];
+    }else if (status == kCLAuthorizationStatusDenied){
+        NSError *error = [self buildErrorWithCode:kVCCErrorCodeNoLocationAuthorization
+                                      andErrorMsg:@"system toggled off geolocation service or current app does not get authorization"];
+        if (self.completionHandler) {
+            self.completionHandler(NO, nil, error);
+        }
+        self.locManager = nil;
     }
 }
 
